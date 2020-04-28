@@ -12,8 +12,10 @@ int main()
 		updatePollEvents();
 
 		sf::Time dt = clock.restart();
+		if(!gameOver)
+		{
 		updatePosition(dt.asSeconds());
-
+		}
 		window.clear();
 		draw();
 		window.display();
